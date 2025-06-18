@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
-<style>
-  body {
-    margin: 0; 
-    font-family: Arial, sans-serif; 
-    background: #000;
-    color: #fff;
-  }
-  header {
-    background: #E10600;
-    padding: 30px 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-  }
-  header p {
-    margin: 5px 0 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    color: #E10600;
-    border-bottom: 2px solid #E10600;
-    padding-bottom: 8px;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  ul li {
-    margin-bottom: 12px;
-  }
-  .cta-btn {
-    display: inline-block;
-    background: #E10600;
-    color: white;
-    font-weight: bold;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background 0.3s ease;
-  }
-  .cta-btn:hover {
-    background: #a70400;
-  }
-  .two-columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .column {
-    flex: 1 1 300px;
-    background: #111;
-    padding: 20px;
-    border-radius: 6px;
-  }
-  footer {
-    text-align: center;
-    padding: 15px 10px;
-    background: #111;
-    font-size: 0.9rem;
-    color: #bbb;
-  }
-  iframe {
-    width: 100%;
-    border: none;
-    border-radius: 6px;
-  }
-  @media(max-width: 600px){
-    .two-columns {
-      flex-direction: column;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ScoutLink connects hidden athlete talent to real recruiting opportunities. Get discovered today.">
+  <meta name="keywords" content="ScoutLink, athlete recruiting, football, basketball, scouts, exposure">
+  <meta name="author" content="ScoutLink">
+
+  <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    body {
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background: #000;
+      color: #fff;
     }
-  }
-</style>
+    header {
+      background: #E10600;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #E10600;
+      border-bottom: 2px solid #E10600;
+      padding-bottom: 8px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 12px;
+    }
+    ol li {
+      margin-bottom: 10px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #E10600;
+      color: white;
+      font-weight: bold;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: #a70400;
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .column {
+      flex: 1 1 300px;
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    @media(max-width: 600px){
+      .two-columns {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -101,7 +105,7 @@
 
 <main>
 
-  <section>
+  <section aria-label="How ScoutLink Works">
     <h2>How ScoutLink Works</h2>
     <ol>
       <li>Submit your athlete profile.</li>
@@ -111,7 +115,7 @@
     </ol>
   </section>
 
-  <section>
+  <section aria-label="Why Choose Us">
     <h2>Why ScoutLink?</h2>
     <ul>
       <li>Trusted by athletes and scouts nationwide</li>
@@ -121,7 +125,7 @@
     </ul>
   </section>
 
-  <section class="two-columns">
+  <section class="two-columns" aria-label="Target Audiences">
     <div class="column">
       <h3>For Athletes</h3>
       <p>Ready to get noticed? DM us your profile or fill out our submission form — either way, we’re here to help you shine.</p>
@@ -132,29 +136,22 @@
     </div>
   </section>
 
-  <section>
+  <section aria-label="Testimonials">
     <h2>Testimonials</h2>
     <blockquote>"ScoutLink helped me land my first college scholarship!" – Alex P.</blockquote>
     <blockquote>"I found three recruits through ScoutLink last season." – Coach Ramirez</blockquote>
   </section>
 
-  <section>
+  <section aria-label="Submission Form">
+    <h2>Submit Your Profile</h2>
+    <p>Fill out our form to start the process:</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" title="Athlete Submission Form">Loading…</iframe>
+  </section>
+
+  <section aria-label="Contact">
     <h2>Contact / DM Us</h2>
     <p>Have questions or want to learn more? Send us a DM on Instagram:</p>
     <p><a href="https://instagram.com/ScoutLinkOfficial" target="_blank" rel="noopener noreferrer" style="color:#E10600;">@ScoutLinkOfficial</a></p>
-  </section>
-
-  <!-- New Submission Form Section -->
-  <section>
-    <h2>Submit Your Profile</h2>
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" 
-      width="640" 
-      height="800" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0"
-      >Loading…</iframe>
   </section>
 
 </main>
@@ -165,4 +162,3 @@
 
 </body>
 </html>
-
