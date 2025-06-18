@@ -4,13 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
-  <meta name="description" content="ScoutLink connects hidden athletic talent to recruiters and scouts nationwide." />
+  <meta name="description" content="ScoutLink connects undiscovered athletes with scouts and recruiters. Submit your profile now and get scouted." />
+  <meta name="keywords" content="scouting, athletes, football, basketball, recruiting, talent" />
+  <meta name="author" content="ScoutLink Team" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="ScoutLink - Get Scouted" />
   <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
   <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
   <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png" />
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -20,6 +28,7 @@
       font-family: Arial, sans-serif;
       background: #000;
       color: #fff;
+      line-height: 1.6;
     }
     header {
       background: #E10600;
@@ -36,20 +45,25 @@
       font-size: 1.1rem;
       font-weight: 600;
     }
-    .cta-btn {
-      display: inline-block;
-      background: #E10600;
-      color: white;
-      font-weight: bold;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background 0.3s ease;
+    nav {
+      background: #111;
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .cta-btn:hover {
-      background: #a70400;
+    nav a {
+      color: #fff;
+      margin: 0 16px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ff4c4c;
+      outline: none;
     }
     main {
       max-width: 900px;
@@ -64,11 +78,31 @@
       border-bottom: 2px solid #E10600;
       padding-bottom: 8px;
     }
-    ul, ol {
+    ol, ul {
       padding-left: 20px;
+    }
+    ul {
+      list-style-type: disc;
     }
     ul li, ol li {
       margin-bottom: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #E10600;
+      color: white;
+      font-weight: bold;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover,
+    .cta-btn:focus {
+      background: #ff1a1a;
+      outline: none;
     }
     .two-columns {
       display: flex;
@@ -81,31 +115,32 @@
       padding: 20px;
       border-radius: 6px;
     }
-    blockquote {
-      border-left: 4px solid #E10600;
-      margin-left: 0;
-      padding-left: 15px;
-      color: #ccc;
-    }
     iframe {
       width: 100%;
       height: 600px;
       border: none;
       border-radius: 6px;
+      margin-top: 20px;
     }
-    .scroll-to-top {
+    #scrollTopBtn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
       background-color: #E10600;
-      color: white;
+      color: #fff;
       border: none;
-      padding: 12px 16px;
-      border-radius: 50%;
-      font-size: 20px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 16px;
       display: none;
       z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    #scrollTopBtn:hover,
+    #scrollTopBtn:focus {
+      background-color: #a70400;
+      outline: none;
     }
     footer {
       text-align: center;
@@ -118,19 +153,35 @@
       .two-columns {
         flex-direction: column;
       }
+      nav a {
+        display: inline-block;
+        margin: 8px 12px;
+        font-size: 1rem;
+      }
+      iframe {
+        height: 450px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1 id="top">Discover Hidden Talent. Get Scouted.</h1>
+<header id="top">
+  <h1>Discover Hidden Talent. Get Scouted.</h1>
   <p>ScoutLink connects athletes like you with recruiters and scouts — no matter where you play.</p>
-  <a href="https://instagram.com/ScoutLinkOfficial" class="cta-btn" target="_blank" rel="noopener noreferrer">DM us to get scouted 🔥</a>
+  <a href="https://instagram.com/ScoutLinkOfficial" class="cta-btn" target="_blank" rel="noopener noreferrer" aria-label="DM us on Instagram">@ScoutLinkOfficial 🔥</a>
 </header>
 
+<nav role="navigation" aria-label="Primary">
+  <a href="#how" aria-label="How ScoutLink Works section">How It Works</a>
+  <a href="#why" aria-label="Why ScoutLink section">Why Us</a>
+  <a href="#for" aria-label="For You section">For You</a>
+  <a href="#testimonials" aria-label="Testimonials section">Testimonials</a>
+  <a href="#form" aria-label="Submit your profile form">Submit</a>
+</nav>
+
 <main>
-  <section>
+  <section id="how" tabindex="-1">
     <h2>How ScoutLink Works</h2>
     <ol>
       <li>Submit your athlete profile.</li>
@@ -140,7 +191,7 @@
     </ol>
   </section>
 
-  <section>
+  <section id="why" tabindex="-1">
     <h2>Why ScoutLink?</h2>
     <ul>
       <li>Trusted by athletes and scouts nationwide</li>
@@ -150,50 +201,53 @@
     </ul>
   </section>
 
-  <section class="two-columns">
-    <div class="column" aria-label="For Athletes">
+  <section class="two-columns" id="for" tabindex="-1">
+    <div class="column">
       <h3>For Athletes</h3>
       <p>Ready to get noticed? DM us your profile or fill out our submission form — either way, we’re here to help you shine.</p>
     </div>
-    <div class="column" aria-label="For Scouts and Recruiters">
+    <div class="column">
       <h3>For Scouts & Recruiters</h3>
       <p>Looking for fresh talent? Join ScoutLink to discover players with verified stats and verified backgrounds — all in one place.</p>
     </div>
   </section>
 
-  <section>
+  <section id="testimonials" tabindex="-1">
     <h2>Testimonials</h2>
     <blockquote>"ScoutLink helped me land my first college scholarship!" – Alex P.</blockquote>
     <blockquote>"I found three recruits through ScoutLink last season." – Coach Ramirez</blockquote>
   </section>
 
-  <section>
-    <h2>Get Scouted Form</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform" loading="lazy" title="ScoutLink Submission Form"></iframe>
-  </section>
-
-  <section>
-    <h2>Contact / DM Us</h2>
-    <p>Have questions or want to learn more? Send us a DM on Instagram:</p>
-    <p><a href="https://instagram.com/ScoutLinkOfficial" target="_blank" rel="noopener noreferrer" style="color:#E10600;">@ScoutLinkOfficial</a></p>
+  <section id="form" tabindex="-1">
+    <h2>Submit Your Profile</h2>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" 
+      aria-label="Athlete profile submission form" 
+      loading="lazy"
+    >
+      Loading…
+    </iframe>
   </section>
 </main>
 
-<button class="scroll-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">&#8679;</button>
+<button id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+  ↑ Top
+</button>
 
 <footer>
   © 2025 ScoutLink — Connecting Hidden Talent to Real Opportunities
 </footer>
 
 <script>
-  // Show scroll button
-  const scrollBtn = document.querySelector(".scroll-to-top");
-  window.addEventListener("scroll", () => {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
   });
 </script>
 
 </body>
 </html>
-
-
