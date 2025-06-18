@@ -4,36 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
-  <meta name="description" content="ScoutLink connects undiscovered athletes with scouts and recruiters. Submit your profile now and get scouted." />
-  <meta name="keywords" content="scouting, athletes, football, basketball, recruiting, talent" />
-  <meta name="author" content="ScoutLink Team" />
+  <meta name="description" content="ScoutLink connects hidden athletic talent to recruiters and scouts nationwide." />
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="ScoutLink - Get Scouted" />
   <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
   <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
   <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+  
+  <!-- Security-related meta tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ScoutLink",
+    "url": "https://scoutlink1.github.io/ScoutLink/",
+    "logo": "https://scoutlink1.github.io/ScoutLink/favicon.png",
+    "sameAs": [
+      "https://instagram.com/ScoutLinkOfficial"
+    ],
+    "description": "ScoutLink connects hidden athletic talent to recruiters and scouts nationwide."
+  }
+  </script>
+
+  <!-- Google Analytics (Generic placeholder) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script>
 
   <style>
+    :root {
+      --red: #E10600;
+      --red-light: #ff1a1a;
+      --black: #000;
+      --dark-bg: #111;
+      --white: #fff;
+      --gray: #bbb;
+    }
     html {
       scroll-behavior: smooth;
     }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
+      background: var(--black);
+      color: var(--white);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    body.light-mode {
+      background: #f8f8f8;
+      color: #111;
     }
     header {
-      background: #E10600;
+      background: var(--red);
       padding: 30px 20px;
       text-align: center;
+      transition: background 0.4s ease;
+    }
+    body.light-mode header {
+      background: #ff4d4d;
     }
     header h1 {
       margin: 0;
@@ -46,24 +88,28 @@
       font-weight: 600;
     }
     nav {
-      background: #111;
-      padding: 12px 0;
+      background: var(--dark-bg);
+      padding: 10px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    }
+    body.light-mode nav {
+      background: #ddd;
     }
     nav a {
-      color: #fff;
-      margin: 0 16px;
+      color: var(--white);
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
-    nav a:hover,
-    nav a:focus {
-      color: #ff4c4c;
-      outline: none;
+    body.light-mode nav a {
+      color: #222;
+    }
+    nav a:hover {
+      color: var(--red);
+    }
+    body.light-mode nav a:hover {
+      color: #b30000;
     }
     main {
       max-width: 900px;
@@ -74,23 +120,27 @@
       margin-bottom: 40px;
     }
     h2 {
-      color: #E10600;
-      border-bottom: 2px solid #E10600;
+      color: var(--red);
+      border-bottom: 2px solid var(--red);
       padding-bottom: 8px;
     }
-    ol, ul {
-      padding-left: 20px;
+    body.light-mode h2 {
+      color: #b30000;
+      border-color: #b30000;
     }
-    ul {
-      list-style-type: disc;
+    h3 {
+      margin-top: 0;
+    }
+    ul, ol {
+      padding-left: 1.2rem;
     }
     ul li, ol li {
       margin-bottom: 12px;
     }
     .cta-btn {
       display: inline-block;
-      background: #E10600;
-      color: white;
+      background: var(--red);
+      color: var(--white);
       font-weight: bold;
       padding: 15px 30px;
       font-size: 1.2rem;
@@ -98,11 +148,11 @@
       text-decoration: none;
       margin-top: 20px;
       transition: background 0.3s ease;
+      cursor: pointer;
+      border: none;
     }
-    .cta-btn:hover,
-    .cta-btn:focus {
-      background: #ff1a1a;
-      outline: none;
+    .cta-btn:hover {
+      background: var(--red-light);
     }
     .two-columns {
       display: flex;
@@ -111,9 +161,14 @@
     }
     .column {
       flex: 1 1 300px;
-      background: #111;
+      background: var(--dark-bg);
       padding: 20px;
       border-radius: 6px;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    body.light-mode .column {
+      background: #eee;
+      color: #222;
     }
     iframe {
       width: 100%;
@@ -127,8 +182,8 @@
       bottom: 20px;
       right: 20px;
       padding: 12px 18px;
-      background-color: #E10600;
-      color: #fff;
+      background-color: var(--red);
+      color: var(--white);
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -137,51 +192,173 @@
       z-index: 1000;
       transition: background-color 0.3s ease;
     }
-    #scrollTopBtn:hover,
-    #scrollTopBtn:focus {
+    #scrollTopBtn:hover {
       background-color: #a70400;
-      outline: none;
     }
     footer {
       text-align: center;
       padding: 15px 10px;
-      background: #111;
+      background: var(--dark-bg);
       font-size: 0.9rem;
-      color: #bbb;
+      color: var(--gray);
+      transition: background 0.4s ease, color 0.4s ease;
     }
-    @media (max-width: 600px) {
+    body.light-mode footer {
+      background: #ddd;
+      color: #444;
+    }
+    /* Social Share Buttons */
+    .social-share {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .social-share button {
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      padding: 10px 16px;
+      margin: 0 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .social-share button:hover {
+      background: var(--red-light);
+    }
+    /* Testimonials Carousel */
+    #testimonials blockquote {
+      display: none;
+      font-style: italic;
+      background: var(--dark-bg);
+      padding: 15px 20px;
+      border-left: 6px solid var(--red);
+      margin-bottom: 20px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    #testimonials blockquote.active {
+      display: block;
+    }
+    /* FAQ */
+    #faq dt {
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 5px;
+      transition: color 0.3s ease;
+    }
+    #faq dd {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      display: none;
+      transition: max-height 0.3s ease;
+    }
+    #faq dt.open {
+      color: var(--red);
+    }
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {opacity: 1;}
+    }
+    /* Feedback Form */
+    #feedback-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: var(--dark-bg);
+      padding: 20px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    body.light-mode #feedback-form {
+      background: #eee;
+      color: #222;
+    }
+    #feedback-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    #feedback-form input,
+    #feedback-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    #feedback-form button {
+      background: var(--red);
+      color: var(--white);
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    #feedback-form button:hover {
+      background: var(--red-light);
+    }
+    /* Dark Mode Toggle */
+    #darkModeToggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1100;
+      transition: background 0.3s ease;
+    }
+    #darkModeToggle:hover {
+      background: var(--red-light);
+    }
+    /* Responsive */
+    @media(max-width: 600px){
       .two-columns {
         flex-direction: column;
-      }
-      nav a {
-        display: inline-block;
-        margin: 8px 12px;
-        font-size: 1rem;
-      }
-      iframe {
-        height: 450px;
       }
     }
   </style>
 </head>
 <body>
 
-<header id="top">
+<!-- Dark Mode Toggle Button -->
+<button id="darkModeToggle" aria-label="Toggle dark/light mode">Toggle Light Mode</button>
+
+<header id="top" class="fade-in">
   <h1>Discover Hidden Talent. Get Scouted.</h1>
   <p>ScoutLink connects athletes like you with recruiters and scouts — no matter where you play.</p>
   <a href="https://instagram.com/ScoutLinkOfficial" class="cta-btn" target="_blank" rel="noopener noreferrer" aria-label="DM us on Instagram">@ScoutLinkOfficial 🔥</a>
 </header>
 
-<nav role="navigation" aria-label="Primary">
-  <a href="#how" aria-label="How ScoutLink Works section">How It Works</a>
-  <a href="#why" aria-label="Why ScoutLink section">Why Us</a>
-  <a href="#for" aria-label="For You section">For You</a>
-  <a href="#testimonials" aria-label="Testimonials section">Testimonials</a>
-  <a href="#form" aria-label="Submit your profile form">Submit</a>
+<nav>
+  <a href="#how">How It Works</a>
+  <a href="#why">Why Us</a>
+  <a href="#for">For You</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#faq">FAQ</a>
+  <a href="#form">Submit</a>
+  <a href="#feedback">Feedback</a>
 </nav>
 
 <main>
-  <section id="how" tabindex="-1">
+  <section id="how" class="fade-in">
     <h2>How ScoutLink Works</h2>
     <ol>
       <li>Submit your athlete profile.</li>
@@ -191,7 +368,7 @@
     </ol>
   </section>
 
-  <section id="why" tabindex="-1">
+  <section id="why" class="fade-in">
     <h2>Why ScoutLink?</h2>
     <ul>
       <li>Trusted by athletes and scouts nationwide</li>
@@ -201,7 +378,7 @@
     </ul>
   </section>
 
-  <section class="two-columns" id="for" tabindex="-1">
+  <section class="two-columns fade-in" id="for">
     <div class="column">
       <h3>For Athletes</h3>
       <p>Ready to get noticed? DM us your profile or fill out our submission form — either way, we’re here to help you shine.</p>
@@ -212,42 +389,74 @@
     </div>
   </section>
 
-  <section id="testimonials" tabindex="-1">
+  <section id="testimonials" class="fade-in">
     <h2>Testimonials</h2>
-    <blockquote>"ScoutLink helped me land my first college scholarship!" – Alex P.</blockquote>
-    <blockquote>"I found three recruits through ScoutLink last season." – Coach Ramirez</blockquote>
+    <div id="testimonials">
+      <blockquote class="active" aria-live="polite">"ScoutLink helped me land my first college scholarship!" – Alex P.</blockquote>
+      <blockquote>"I found three recruits through ScoutLink last season." – Coach Ramirez</blockquote>
+      <blockquote>"The platform made recruiting easy and efficient." – Sarah M.</blockquote>
+    </div>
   </section>
 
-  <section id="form" tabindex="-1">
+  <section id="faq" class="fade-in" aria-label="Frequently Asked Questions">
+    <h2>Frequently Asked Questions</h2>
+    <dl id="faq">
+      <dt tabindex="0">How long does it take to get scouted?</dt>
+      <dd>Typically, within 2-4 weeks after profile submission.</dd>
+      <dt tabindex="0">Is ScoutLink free for athletes?</dt>
+      <dd>Yes, athletes can submit their profiles free of charge.</dd>
+      <dt tabindex="0">Can I update my profile later?</dt>
+      <dd>Yes, you can update your profile anytime by contacting our support team.</dd>
+      <dt tabindex="0">What sports do you focus on?</dt>
+      <dd>Currently Football and Basketball, with plans to expand.</dd>
+    </dl>
+  </section>
+
+  <section id="form" class="fade-in" aria-label="Athlete profile submission form">
     <h2>Submit Your Profile</h2>
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" 
-      aria-label="Athlete profile submission form" 
-      loading="lazy"
-    >
-      Loading…
-    </iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" aria-label="Athlete profile submission form">Loading…</iframe>
+  </section>
+
+  <section id="feedback" class="fade-in" aria-label="Site feedback form">
+    <h2>Send Us Feedback</h2>
+    <form id="feedback-form" aria-describedby="feedback-desc" novalidate>
+      <p id="feedback-desc">We appreciate your feedback to help us improve ScoutLink.</p>
+      <label for="name">Name (optional)</label>
+      <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" />
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+      <button type="submit" aria-label="Send feedback">Submit</button>
+      <p id="feedback-status" role="alert" style="display:none; margin-top:10px;"></p>
+    </form>
+  </section>
+
+  <!-- Social share buttons -->
+  <section class="social-share fade-in" aria-label="Share ScoutLink on social media">
+    <h2>Share ScoutLink</h2>
+    <button onclick="shareSocial('facebook')" aria-label="Share on Facebook">Facebook</button>
+    <button onclick="shareSocial('twitter')" aria-label="Share on Twitter">Twitter</button>
+    <button onclick="shareSocial('linkedin')" aria-label="Share on LinkedIn">LinkedIn</button>
   </section>
 </main>
 
-<button id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-  ↑ Top
-</button>
+<button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" aria-label="Scroll to top">↑ Top</button>
 
 <footer>
   © 2025 ScoutLink — Connecting Hidden Talent to Real Opportunities
 </footer>
 
 <script>
+  // Scroll to top button show/hide
   const scrollBtn = document.getElementById("scrollTopBtn");
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = 'block';
-    } else {
-      scrollBtn.style.display = 'none';
-    }
-  });
-</script>
+  window.onscroll = () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  };
 
-</body>
-</html>
+  // Testimonials carousel
+  const testimonials = document.querySelectorAll("#testimonials blockquote");
+  let currentTestimonial = 0;
+  function showTestimonial(index) {
+    testimonials.forEach((bq, i
+
