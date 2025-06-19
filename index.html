@@ -3,199 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScoutLink</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    /* Reset and base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
+  <meta name="description" content="ScoutLink connects hidden athletic talent to recruiters and scouts nationwide." />
 
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="ScoutLink - Get Scouted" />
+  <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
+  <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
+  <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <style>
     body {
-      background-color: #121212;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+    header, section, footer {
       padding: 20px;
     }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover,
-    a:focus {
-      color: #0056D2;
-      outline: none;
-    }
-
-    header {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 180px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-
     h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      font-weight: 700;
+      font-size: 2.5rem;
+      color: #E10600;
     }
-
-    nav {
-      margin-bottom: 40px;
-    }
-
     nav a {
-      margin: 0 15px;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    main {
-      width: 100%;
-      max-width: 900px;
-      background-color: #1E1E1E;
-      border-radius: 8px;
-      padding: 25px 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: #E0E0E0;
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 6px;
-    }
-
-    p, li {
-      font-size: 1.1rem;
-      color: #CCCCCC;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    button, .btn {
-      background-color: #007BFF;
-      color: #FFFFFF;
-      border: none;
-      padding: 12px 28px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-      text-align: center;
+      color: white;
+      margin: 0 10px;
       text-decoration: none;
+      font-weight: bold;
     }
-
-    button:hover, button:focus, .btn:hover, .btn:focus {
-      background-color: #0056D2;
-      outline: none;
+    nav a:hover {
+      color: #E10600;
     }
-
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #E10600;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .column {
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+      width: 300px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 6px;
+    }
+    #login {
+      max-width: 400px;
+      margin: auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    #athlete-spotlight {
+      padding: 20px;
+      background: #111;
+      border-radius: 6px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
     footer {
-      margin-top: 40px;
-      color: #666666;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      body {
-        padding: 15px;
-      }
-      header img {
-        max-width: 140px;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      nav a {
-        margin: 0 8px;
-        font-size: 1rem;
-      }
-      main {
-        padding: 20px;
-      }
+      background: #111;
+      color: #bbb;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Replace 'logo.png' with your actual logo file path -->
-    <img src="logo.png" alt="ScoutLink Logo" />
     <h1>ScoutLink</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Connecting Hidden Talent to Real Opportunities</p>
+    <a href="https://instagram.com/scout_link1/" class="cta-btn" target="_blank">Follow on Instagram</a>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About ScoutLink</h2>
-      <p>Welcome to ScoutLink, your trusted platform connecting athletes, coaches, and recruiters worldwide. We provide tools and support to help you achieve your sports goals.</p>
-    </section>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#for">For You</a>
+    <a href="#form">Submit</a>
+    <a href="#login">Scout Login</a>
+    <a href="#athlete-spotlight">Spotlight</a>
+  </nav>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Athlete profiles and spotlight features</li>
-        <li>Recruiter and coach login portal</li>
-        <li>Community forums and networking</li>
-        <li>Regular updates on events and opportunities</li>
-      </ul>
-      <a href="#contact" class="btn">Get Started</a>
-    </section>
+  <section id="how">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Submit your profile.</li>
+      <li>We verify your stats.</li>
+      <li>Scouts find you.</li>
+      <li>Opportunities open up.</li>
+    </ol>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>If you have questions or want to learn more, reach out anytime!</p>
-      <form action="#" method="post" aria-label="Contact form">
-        <label for="name" style="display:none;">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:none;"/>
-        
-        <label for="email" style="display:none;">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:none;"/>
+  <section id="for" class="two-columns">
+    <div class="column">
+      <h3>Athletes</h3>
+      <p>Get scouted by submitting your info today.</p>
+    </div>
+    <div class="column">
+      <h3>Scouts</h3>
+      <p>Discover the next generation of talent.</p>
+    </div>
+  </section>
 
-        <label for="message" style="display:none;">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" rows="5" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:none;"></textarea>
+  <section id="form">
+    <h2>Submit Your Profile</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true">Loading…</iframe>
+  </section>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <section id="login">
+    <h2>Scout Login / Create Account</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="text" placeholder="Phone Number" required>
+      <input type="text" placeholder="Scout Name" required>
+      <input type="submit" value="Login">
+      <input type="submit" value="Create Account">
+    </form>
+  </section>
+
+  <section id="athlete-spotlight">
+    <h2>Athlete Spotlight</h2>
+    <p><em>Coming soon…</em></p>
+  </section>
 
   <footer>
-    &copy; 2025 ScoutLink. All rights reserved.
+    &copy; 2025 ScoutLink
   </footer>
+
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68549a14a39e6f190afded94/1iu57jo7b';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 </body>
 </html>
