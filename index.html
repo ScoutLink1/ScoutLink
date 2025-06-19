@@ -9,46 +9,30 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="ScoutLink - Get Scouted" />
   <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
-  <meta property="og:image" content="logo.png" />
+  <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
   <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
+      background-color: #000;
       color: #fff;
-    }
-    header {
-      background: #E10600;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      justify-content: space-between;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-    .logo-container img {
-      height: 50px;
-      margin-right: 15px;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-    nav {
-      background: #111;
-      padding: 10px;
       text-align: center;
     }
+    header, section, footer {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #E10600;
+    }
     nav a {
-      color: #fff;
+      color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
@@ -56,97 +40,134 @@
     nav a:hover {
       color: #E10600;
     }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #E10600;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
     }
-    h2 {
-      color: #E10600;
-      border-bottom: 2px solid #E10600;
-      padding-bottom: 8px;
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    #scout-login {
+    .column {
       background: #111;
       padding: 20px;
       border-radius: 6px;
-      text-align: center;
+      width: 300px;
     }
-    #scout-login img {
-      height: 60px;
-      margin-bottom: 20px;
-    }
-    #scout-login input {
-      display: block;
+    iframe {
       width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-      border-radius: 4px;
+      height: 500px;
       border: none;
-    }
-    #scout-login button {
-      background: #E10600;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1rem;
       border-radius: 6px;
-      cursor: pointer;
     }
-    #scout-login button:hover {
-      background: #ff1a1a;
+    #login {
+      max-width: 400px;
+      margin: auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    #athlete-spotlight {
+      padding: 20px;
+      background: #111;
+      border-radius: 6px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    footer {
+      background: #111;
+      color: #bbb;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="ScoutLink Logo" />
-      <h1>ScoutLink</h1>
-    </div>
-    <a href="https://instagram.com/scout_link1" target="_blank" style="color: white; font-weight: bold;">@scout_link1</a>
+    <h1>ScoutLink</h1>
+    <p>Connecting Hidden Talent to Real Opportunities</p>
+    <a href="https://instagram.com/scout_link1/" class="cta-btn" target="_blank">Follow on Instagram</a>
   </header>
 
   <nav>
     <a href="#how">How It Works</a>
+    <a href="#for">For You</a>
+    <a href="#form">Submit</a>
     <a href="#login">Scout Login</a>
-    <a href="#spotlight">Athlete Spotlight</a>
+    <a href="#athlete-spotlight">Spotlight</a>
   </nav>
 
-  <main>
-    <section id="how">
-      <h2>How It Works</h2>
-      <ol>
-        <li>Submit your athlete profile.</li>
-        <li>We verify your highlights and stats.</li>
-        <li>Scouts find you based on skills.</li>
-        <li>You get discovered!</li>
-      </ol>
-    </section>
+  <section id="how">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Submit your profile.</li>
+      <li>We verify your stats.</li>
+      <li>Scouts find you.</li>
+      <li>Opportunities open up.</li>
+    </ol>
+  </section>
 
-    <section id="login">
-      <h2>Scout Login</h2>
-      <div id="scout-login">
-        <img src="logo.png" alt="ScoutLink Logo" />
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <input type="tel" placeholder="Phone Number" />
-        <input type="text" placeholder="Scout Name" />
-        <button>Create Account</button>
-      </div>
-    </section>
+  <section id="for" class="two-columns">
+    <div class="column">
+      <h3>Athletes</h3>
+      <p>Get scouted by submitting your info today.</p>
+    </div>
+    <div class="column">
+      <h3>Scouts</h3>
+      <p>Discover the next generation of talent.</p>
+    </div>
+  </section>
 
-    <section id="spotlight">
-      <h2>Athlete Spotlight</h2>
-      <p>Coming soon: Profiles of top-performing athletes from our network.</p>
-    </section>
-  </main>
+  <section id="form">
+    <h2>Submit Your Profile</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true">Loading…</iframe>
+  </section>
+
+  <section id="login">
+    <h2>Scout Login / Create Account</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="text" placeholder="Phone Number" required>
+      <input type="text" placeholder="Scout Name" required>
+      <input type="submit" value="Login">
+      <input type="submit" value="Create Account">
+    </form>
+  </section>
+
+  <section id="athlete-spotlight">
+    <h2>Athlete Spotlight</h2>
+    <p><em>Coming soon…</em></p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 ScoutLink — Connecting Hidden Talent to Real Opportunities</p>
+    &copy; 2025 ScoutLink
   </footer>
+
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68549a14a39e6f190afded94/1iu57jo7b';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 </body>
 </html>
