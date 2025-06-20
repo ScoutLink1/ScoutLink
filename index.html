@@ -16,38 +16,53 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary: #0A1D37;
+      --secondary: #F5F5F5;
+      --accent: #FDB927;
+      --text-light: #FFFFFF;
+      --text-dark: #1E1E1E;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--secondary);
+      color: var(--primary);
       text-align: center;
     }
     header, section, footer {
       padding: 20px;
     }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
     h1 {
       font-size: 2.5rem;
-      color: #E10600;
+      color: var(--primary);
     }
     nav a {
-      color: white;
+      color: var(--primary);
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      color: #E10600;
+      color: var(--accent);
     }
     .cta-btn {
       display: inline-block;
       padding: 12px 20px;
-      background-color: #E10600;
-      color: white;
+      background-color: var(--accent);
+      color: var(--primary);
       text-decoration: none;
       border-radius: 6px;
       margin-top: 10px;
+      font-weight: bold;
     }
     .two-columns {
       display: flex;
@@ -56,10 +71,11 @@
       gap: 20px;
     }
     .column {
-      background: #111;
+      background: var(--text-light);
       padding: 20px;
       border-radius: 6px;
       width: 300px;
+      color: var(--primary);
     }
     iframe {
       width: 100%;
@@ -70,9 +86,10 @@
     #login {
       max-width: 400px;
       margin: auto;
-      background: #111;
+      background: var(--text-light);
       padding: 20px;
       border-radius: 6px;
+      color: var(--primary);
     }
     input {
       width: 100%;
@@ -83,13 +100,14 @@
     }
     #athlete-spotlight {
       padding: 20px;
-      background: #111;
+      background: var(--text-light);
       border-radius: 6px;
       margin: 20px auto;
       max-width: 600px;
+      color: var(--primary);
     }
     footer {
-      background: #111;
+      background: var(--primary);
       color: #bbb;
       padding: 10px;
     }
@@ -150,7 +168,9 @@
 
   <section id="athlete-spotlight">
     <h2>Athlete Spotlight</h2>
-    <p><em>Coming soon…</em></p>
+    <p><strong>Jordan Daniels</strong></p>
+    <p>Position: Shooting Guard | Height: 6'4" | GPA: 3.8</p>
+    <p>"I love the game and give it my all every time I step on the court."</p>
   </section>
 
   <footer>
