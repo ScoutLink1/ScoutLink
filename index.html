@@ -2,172 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
-  <meta name="description" content="ScoutLink connects hidden athletic talent to recruiters and scouts nationwide." />
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="ScoutLink - Get Scouted" />
-  <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
-  <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
-  <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutLink | Connecting Athletes & Scouts</title>
+  <meta name="description" content="ScoutLink connects young athletes with coaches and recruiters. Showcase your skills, get discovered, and join the ScoutLink network." />
+  <meta property="og:title" content="ScoutLink | Connecting Athletes & Scouts" />
+  <meta property="og:description" content="Showcase your skills. Get discovered. Join the ScoutLink network." />
+  <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/assets/scoutlink-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <style>
+    :root {
+      --primary: #0A1D37;
+      --secondary: #F5F5F5;
+      --accent: #FDB927;
+      --text-light: #FFFFFF;
+      --link: #1E90FF;
+    }
+
     body {
+      background-color: var(--secondary);
+      color: var(--primary);
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .navbar, .footer {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 1rem;
+    }
+
+    .navbar nav a {
+      color: var(--text-light);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    .hero, .about, .spotlight, .login, .contact, .instagram {
+      padding: 2rem;
+    }
+
+    .hero {
+      background-color: var(--primary);
+      color: var(--text-light);
       text-align: center;
     }
-    header, section, footer {
-      padding: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #E10600;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #E10600;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #E10600;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .column {
-      background: #111;
-      padding: 20px;
-      border-radius: 6px;
-      width: 300px;
-    }
-    iframe {
-      width: 100%;
-      height: 500px;
+
+    button {
+      background-color: var(--accent);
+      color: var(--primary);
       border: none;
+      padding: 10px 20px;
       border-radius: 6px;
+      transition: 0.3s ease;
+      cursor: pointer;
     }
-    #login {
-      max-width: 400px;
-      margin: auto;
-      background: #111;
-      padding: 20px;
-      border-radius: 6px;
+
+    button:hover {
+      background-color: var(--primary);
+      color: var(--text-light);
     }
-    input {
-      width: 100%;
-      padding: 10px;
+
+    form input, form p a {
+      display: block;
       margin: 10px 0;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    #athlete-spotlight {
-      padding: 20px;
-      background: #111;
-      border-radius: 6px;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-    footer {
-      background: #111;
-      color: #bbb;
-      padding: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="navbar">
     <h1>ScoutLink</h1>
-    <p>Connecting Hidden Talent to Real Opportunities</p>
-    <a href="https://instagram.com/scout_link1/" class="cta-btn" target="_blank">Follow on Instagram</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#spotlight">Spotlight</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#how">How It Works</a>
-    <a href="#for">For You</a>
-    <a href="#form">Submit</a>
-    <a href="#login">Scout Login</a>
-    <a href="#athlete-spotlight">Spotlight</a>
-  </nav>
-
-  <section id="how">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Submit your profile.</li>
-      <li>We verify your stats.</li>
-      <li>Scouts find you.</li>
-      <li>Opportunities open up.</li>
-    </ol>
+  <section id="home" class="hero">
+    <h2>Connecting Talented Athletes with Scouts & Coaches</h2>
+    <p>Showcase your skills. Get discovered. Join the ScoutLink network.</p>
   </section>
 
-  <section id="for" class="two-columns">
-    <div class="column">
-      <h3>Athletes</h3>
-      <p>Get scouted by submitting your info today.</p>
-    </div>
-    <div class="column">
-      <h3>Scouts</h3>
-      <p>Discover the next generation of talent.</p>
+  <section id="about" class="about">
+    <h2>About ScoutLink</h2>
+    <p>ScoutLink is a platform built to connect aspiring athletes with coaches, recruiters, and scouts who can help launch their careers.</p>
+  </section>
+
+  <section id="spotlight" class="spotlight">
+    <h2>Athlete Spotlight</h2>
+    <div class="athlete-card">
+      <img src="assets/placeholder-athlete.jpg" alt="Athlete photo" />
+      <h3>Jordan Daniels</h3>
+      <p>Position: Shooting Guard | Height: 6'4" | GPA: 3.8</p>
+      <p>"I love the game and give it my all every time I step on the court."</p>
     </div>
   </section>
 
-  <section id="form">
-    <h2>Submit Your Profile</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true">Loading…</iframe>
-  </section>
-
-  <section id="login">
-    <h2>Scout Login / Create Account</h2>
+  <section id="join" class="login">
+    <h2>Recruiter / Coach Login</h2>
     <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="text" placeholder="Phone Number" required>
-      <input type="text" placeholder="Scout Name" required>
-      <input type="submit" value="Login">
-      <input type="submit" value="Create Account">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="text" placeholder="Scout Name" required />
+      <button type="submit">Login</button>
+      <p><a href="#">Create Account</a></p>
     </form>
   </section>
 
-  <section id="athlete-spotlight">
-    <h2>Athlete Spotlight</h2>
-    <p><em>Coming soon…</em></p>
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdG8mT9f5hZmfRn2Rxfs7bI2hTFWS3vvP1ErZzRJZqjzgnH6g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
-  <footer>
-    &copy; 2025 ScoutLink
+  <section class="instagram">
+    <h2>Follow Us on Instagram</h2>
+    <iframe src="https://www.instagram.com/scout_link1/embed" width="100%" height="500" frameborder="0" loading="lazy"></iframe>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ScoutLink. All rights reserved.</p>
   </footer>
 
-  <!-- Tawk.to Live Chat -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68549a14a39e6f190afded94/1iu57jo7b';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
