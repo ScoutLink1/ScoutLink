@@ -6,18 +6,6 @@
   <title>ScoutLink - Sleek & Minimal (Charcoal & Teal)</title>
   <meta name="description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
   <meta name="theme-color" content="#1A1A1A" />
-  
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="ScoutLink - Find Talent. Get Scouted." />
-  <meta property="og:description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ScoutLink - Find Talent. Get Scouted." />
-  <meta name="twitter:description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
-  <meta name="twitter:image" content="https://yourdomain.com/og-image.png" />
-
   <link rel="icon" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
@@ -47,9 +35,6 @@
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
     ::-webkit-scrollbar {
       width: 10px;
@@ -119,7 +104,6 @@
       font-weight: 600;
       letter-spacing: 1px;
       user-select: none;
-      flex-wrap: wrap;
     }
     nav a {
       color: var(--text-light);
@@ -316,6 +300,73 @@
       text-transform: uppercase;
       user-select: none;
     }
+    /* FAQ styles */
+    #faq {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 25px 40px;
+      background: var(--background-white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px var(--shadow-light);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    #faq:hover {
+      box-shadow: 0 12px 30px rgba(0, 150, 136, 0.15);
+    }
+    #faq h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: var(--primary-charcoal);
+      letter-spacing: 1.5px;
+      border-bottom: 4px solid var(--primary-teal);
+      padding-bottom: 10px;
+      max-width: fit-content;
+    }
+    #faq details {
+      margin-bottom: 15px;
+      border-radius: var(--border-radius);
+      padding: 12px 20px;
+      background: #f0f0f0;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-dark);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background var(--transition-speed);
+    }
+    #faq details[open] {
+      background: #e0f2f1;
+      box-shadow: 0 4px 10px rgba(0,150,136,0.2);
+    }
+    #faq details summary {
+      list-style: none;
+      font-size: 1.15rem;
+      outline: none;
+      user-select: none;
+    }
+    #faq details summary::-webkit-details-marker {
+      display: none;
+    }
+    #faq details[open] summary::after {
+      content: "−";
+      float: right;
+      font-weight: 900;
+      font-size: 1.3rem;
+      user-select: none;
+    }
+    #faq details summary::after {
+      content: "+";
+      float: right;
+      font-weight: 900;
+      font-size: 1.3rem;
+      user-select: none;
+    }
+    #faq details p {
+      margin-top: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
     footer {
       background: var(--primary-charcoal);
       color: var(--text-muted);
@@ -325,7 +376,7 @@
       font-size: 0.9rem;
       letter-spacing: 0.5px;
       user-select: none;
-      margin-top: auto;
+      margin-top: 80px;
     }
     #scroll-top {
       position: fixed;
@@ -350,7 +401,6 @@
       box-shadow: 0 8px 20px rgba(0, 121, 107, 0.9);
       outline: none;
     }
-    /* Responsive improvements */
     @media (max-width: 768px) {
       section {
         margin: 60px 15px 30px;
@@ -377,9 +427,6 @@
       form {
         max-width: 100%;
       }
-      iframe {
-        min-height: 400px !important;
-      }
     }
     @media (max-width: 480px) {
       nav {
@@ -404,9 +451,6 @@
         padding: 14px 0;
         font-size: 1.15rem;
       }
-      iframe {
-        min-height: 350px !important;
-      }
     }
   </style>
 </head>
@@ -415,18 +459,19 @@
 <header>
   <h1>ScoutLink</h1>
   <p>Find Talent. Get Scouted. Build Your Future.</p>
-  <a href="https://instagram.com/scout_link1/" target="_blank" class="cta-btn" rel="noopener noreferrer" aria-label="Follow ScoutLink on Instagram">Follow on Instagram</a>
+  <a href="https://instagram.com/scout_link1/" target="_blank" class="cta-btn" rel="noopener noreferrer">Follow on Instagram</a>
 </header>
 
-<nav role="navigation" aria-label="Primary navigation">
+<nav>
   <a href="#how">How It Works</a>
   <a href="#for">For You</a>
   <a href="#form">Submit</a>
   <a href="#scout">Scout Signup</a>
   <a href="#spotlight">Spotlight</a>
+  <a href="#faq">FAQ</a>
 </nav>
 
-<section id="how" tabindex="0" aria-label="How ScoutLink works">
+<section id="how" tabindex="0">
   <h2>How It Works</h2>
   <ol>
     <li>Submit your profile.</li>
@@ -436,7 +481,7 @@
   </ol>
 </section>
 
-<section id="for" class="two-columns" tabindex="0" aria-label="For athletes and scouts">
+<section id="for" class="two-columns" tabindex="0">
   <div class="column">
     <h3>Athletes</h3>
     <p>Submit your info. Get discovered. Level up your future.</p>
@@ -447,16 +492,16 @@
   </div>
 </section>
 
-<section id="form" tabindex="0" aria-label="Athlete profile submission form">
+<section id="form" tabindex="0">
   <h2>Submit Your Athlete Profile</h2>
-  <a class="cta-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform" rel="noopener noreferrer" aria-label="Open Google form to submit athlete profile">Fill Out Form</a>
+  <a class="cta-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform" rel="noopener noreferrer">Fill Out Form</a>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" title="Athlete Profile Submission Form" loading="lazy" style="width:100%; min-height:600px; border:none; border-radius: var(--border-radius); box-shadow: 0 6px 15px rgba(0,0,0,0.1); margin-top: 15px;"></iframe>
 </section>
 
-<section id="scout" tabindex="0" aria-label="Scout signup form">
+<section id="scout" tabindex="0">
   <h2>Scout Signup</h2>
   <p><em>Scouts: Apply for access to our player database.</em></p>
-  <form id="scoutForm" action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" autocomplete="off" novalidate>
+  <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" autocomplete="off" novalidate>
     <input type="hidden" name="_captcha" value="false" />
     <input type="text" name="Name" placeholder="Full Name" required aria-label="Full Name" />
     <input type="email" name="Email" placeholder="Email" required aria-label="Email" />
@@ -465,10 +510,9 @@
     <textarea name="Message" placeholder="Why are you applying? (Optional)" aria-label="Application Message"></textarea>
     <input type="submit" value="Apply for Access" />
   </form>
-  <p id="formFeedback" role="alert" aria-live="polite" style="text-align:center; margin-top:15px; font-weight:600; color: var(--primary-teal); display:none;"></p>
 </section>
 
-<section id="spotlight" tabindex="0" aria-label="Athlete spotlight">
+<section id="spotlight" tabindex="0">
   <h2>Athlete Spotlight</h2>
   <div class="spotlight-card" tabindex="0">
     <strong>Jordan Daniels</strong>
@@ -482,60 +526,37 @@
   </div>
 </section>
 
+<section id="faq" tabindex="0">
+  <h2>FAQ</h2>
+  <details>
+    <summary>How do I submit my athlete profile?</summary>
+    <p>Click the “Submit Your Athlete Profile” section and fill out the Google Form. It’s quick and secure!</p>
+  </details>
+  <details>
+    <summary>How does ScoutLink verify athlete stats?</summary>
+    <p>We review submitted info and may contact your coaches or trainers to confirm your athletic performance.</p>
+  </details>
+  <details>
+    <summary>Who can access athlete profiles?</summary>
+    <p>Verified scouts and recruiters who apply through our Scout Signup form have access to the athlete database.</p>
+  </details>
+  <details>
+    <summary>Is there a fee to join ScoutLink?</summary>
+    <p>No! Both athletes and scouts can use ScoutLink for free during our launch phase.</p>
+  </details>
+  <details>
+    <summary>How soon can I expect to be contacted by scouts?</summary>
+    <p>It varies, but verified profiles typically get viewed within 1-2 weeks after submission.</p>
+  </details>
+  <details>
+    <summary>Can I update my profile after submission?</summary>
+    <p>Yes! Just submit a new form with your updated info or contact us directly.</p>
+  </details>
+</section>
+
 <footer>
   &copy; 2025 ScoutLink | Designed with ❤️
 </footer>
-
-<button id="scroll-top" aria-label="Scroll to top" title="Scroll to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
-
-<script>
-  // Basic client-side form validation and feedback for Scout Signup
-  const form = document.getElementById('scoutForm');
-  const feedback = document.getElementById('formFeedback');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Simple validation (HTML5 also covers this)
-    if (!form.checkValidity()) {
-      feedback.style.color = 'red';
-      feedback.textContent = 'Please fill out all required fields correctly.';
-      feedback.style.display = 'block';
-      return;
-    }
-
-    // Disable form to prevent multiple submits
-    form.querySelector('input[type="submit"]').disabled = true;
-    feedback.style.color = 'var(--primary-teal)';
-    feedback.textContent = 'Submitting...';
-    feedback.style.display = 'block';
-
-    // Submit form programmatically
-    fetch(form.action, {
-      method: form.method,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: new URLSearchParams(new FormData(form))
-    })
-    .then(response => {
-      if (response.ok) {
-        feedback.textContent = 'Thank you! Your application has been submitted.';
-        form.reset();
-      } else {
-        throw new Error('Network response was not ok.');
-      }
-    })
-    .catch(() => {
-      feedback.style.color = 'red';
-      feedback.textContent = 'Oops! There was a problem submitting your form. Please try again later.';
-    })
-    .finally(() => {
-      form.querySelector('input[type="submit"]').disabled = false;
-    });
-  });
-</script>
 
 </body>
 </html>
