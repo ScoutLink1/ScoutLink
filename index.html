@@ -3,123 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScoutLink - Connecting Hidden Talent to Real Opportunities</title>
-  <meta name="description" content="ScoutLink connects hidden athletic talent to recruiters and scouts nationwide." />
-  <meta name="theme-color" content="#0A1D37" />
+  <title>ScoutLink - Find Talent. Get Scouted.</title>
+  <meta name="description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
+  <meta name="theme-color" content="#000000" />
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="ScoutLink - Get Scouted" />
-  <meta property="og:description" content="Discover hidden talent and connect with real opportunities." />
-  <meta property="og:image" content="https://scoutlink1.github.io/ScoutLink/favicon.png" />
-  <meta property="og:url" content="https://scoutlink1.github.io/ScoutLink/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #0A1D37;
-      --secondary: #F5F5F5;
-      --accent: #FDB927;
-      --text-light: #FFFFFF;
-      --text-dark: #1E1E1E;
+      --primary: #000000;
+      --secondary: #ffffff;
+      --accent: #d90429;
+      --light-gray: #f5f5f5;
+      --text-light: #ffffff;
+      --text-dark: #121212;
     }
 
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: var(--secondary);
-      color: var(--primary);
-      text-align: center;
-      scroll-behavior: smooth;
-    }
-    header, section, footer {
-      padding: 20px;
-    }
-    h1, h2, h3 {
-      font-family: 'Montserrat', sans-serif;
+      background: var(--secondary);
       color: var(--text-dark);
     }
-    h1 {
-      font-size: 2.5rem;
+    header {
+      background: var(--primary);
+      color: var(--text-light);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      margin: 10px 0 20px;
+    }
+    nav {
+      background: var(--primary);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
     nav a {
-      color: var(--primary);
-      margin: 0 10px;
+      color: var(--text-light);
       text-decoration: none;
       font-weight: bold;
-      opacity: 0.85;
     }
-    nav a:hover, nav a:focus {
+    nav a:hover {
       color: var(--accent);
-      opacity: 1;
     }
-    .cta-btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: var(--accent);
-      color: var(--primary);
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-weight: bold;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
     .two-columns {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
     }
     .column {
-      background: var(--text-light);
+      background: var(--light-gray);
       padding: 20px;
-      border-radius: 6px;
+      border-radius: 10px;
       width: 300px;
-      color: var(--primary);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: var(--text-light);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #b40322;
     }
     iframe {
       width: 100%;
-      height: 500px;
+      height: 600px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
     }
-    iframe[loading] {
-      loading: lazy;
-    }
-    #login {
-      max-width: 400px;
-      margin: auto;
-      background: var(--text-light);
-      padding: 20px;
-      border-radius: 6px;
-      color: var(--primary);
-    }
-    input {
+    form input, form textarea {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      border-radius: 4px;
+      margin: 8px 0;
       border: 1px solid #ccc;
-    }
-    #athlete-spotlight {
-      padding: 20px;
-      background: var(--text-light);
       border-radius: 6px;
-      margin: 20px auto;
-      max-width: 600px;
-      color: var(--primary);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    .spotlight-profile {
+    form input[type="submit"] {
+      background: var(--accent);
+      color: var(--text-light);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form input[type="submit"]:hover {
+      background: #b40322;
+    }
+    .spotlight-card {
+      background: var(--light-gray);
+      padding: 20px;
+      border-radius: 10px;
       margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     footer {
       background: var(--primary);
       color: #bbb;
+      text-align: center;
       padding: 10px;
     }
     #scroll-top {
@@ -127,7 +138,7 @@
       bottom: 20px;
       right: 20px;
       background: var(--accent);
-      color: var(--primary);
+      color: var(--text-light);
       border: none;
       border-radius: 50%;
       width: 40px;
@@ -137,120 +148,92 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     @media (max-width: 600px) {
-      section, .column, #login {
-        padding: 15px;
-      }
-      nav a {
-        display: block;
-        margin: 5px 0;
-      }
       .two-columns {
         flex-direction: column;
         align-items: center;
       }
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
 <body>
-  <header>
-    <h1>ScoutLink</h1>
-    <p>Connecting Hidden Talent to Real Opportunities</p>
-    <a href="https://instagram.com/scout_link1/" class="cta-btn" target="_blank">Follow on Instagram</a>
-  </header>
 
-  <nav>
-    <a href="#how">How It Works</a>
-    <a href="#for">For You</a>
-    <a href="#form">Submit</a>
-    <a href="#login">Scout Login</a>
-    <a href="#athlete-spotlight">Spotlight</a>
-  </nav>
+<header>
+  <h1>ScoutLink</h1>
+  <p>Find Talent. Get Scouted. Build Your Future.</p>
+  <a href="https://instagram.com/scout_link1/" target="_blank" class="cta-btn">Follow on Instagram</a>
+</header>
 
-  <section id="how">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Submit your profile.</li>
-      <li>We verify your stats.</li>
-      <li>Scouts find you.</li>
-      <li>Opportunities open up.</li>
-    </ol>
-  </section>
+<nav>
+  <a href="#how">How It Works</a>
+  <a href="#for">For You</a>
+  <a href="#form">Submit</a>
+  <a href="#scout">Scout Signup</a>
+  <a href="#spotlight">Spotlight</a>
+</nav>
 
-  <section id="for" class="two-columns">
-    <div class="column">
-      <h3>Athletes</h3>
-      <p>Get scouted by submitting your info today.</p>
-    </div>
-    <div class="column">
-      <h3>Scouts</h3>
-      <p>Discover the next generation of talent.</p>
-    </div>
-  </section>
+<section id="how">
+  <h2>How It Works</h2>
+  <ol>
+    <li>Submit your profile.</li>
+    <li>We verify your stats.</li>
+    <li>Scouts access your profile.</li>
+    <li>Opportunities open up.</li>
+  </ol>
+</section>
 
-  <section id="form">
-    <h2>Submit Your Profile</h2>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform" class="cta-btn" target="_blank">Fill Out Form</a>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true" loading="lazy" aria-label="Profile submission form">Loading…</iframe>
-  </section>
+<section id="for" class="two-columns">
+  <div class="column">
+    <h3>Athletes</h3>
+    <p>Submit your info. Get discovered. Level up your future.</p>
+  </div>
+  <div class="column">
+    <h3>Scouts</h3>
+    <p>Find hidden gems. Get early access to emerging talent.</p>
+  </div>
+</section>
 
-  <section id="scout-cta" style="background:#fff; padding: 20px; margin: 20px auto; border-radius: 6px; max-width: 600px;">
-    <h2>Are You a Scout?</h2>
-    <p>We’ll help you find top talent before your competition does.</p>
-    <a href="#login" class="cta-btn">Create a Free Scout Account</a>
-  </section>
+<section id="form">
+  <h2>Submit Your Athlete Profile</h2>
+  <a class="cta-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform">Fill Out Form</a>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBSNQX7BDEgoh6Klocsgc6EhvP9XQT0a90C6avlqqwMtTjTg/viewform?embedded=true">Loading…</iframe>
+</section>
 
-  <section id="login">
-    <h2>Scout Login / Create Account</h2>
-    <p><em>Feature coming soon. In the meantime, DM us on Instagram to request scout access.</em></p>
-    <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="text" placeholder="Phone Number" required>
-      <input type="text" placeholder="Scout Name" required>
-      <input type="submit" value="Login">
-      <input type="submit" value="Create Account">
-    </form>
-  </section>
+<section id="scout">
+  <h2>Scout Signup</h2>
+  <p><em>Scouts: Apply for access to our player database.</em></p>
+  <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="Name" placeholder="Full Name" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="text" name="Phone" placeholder="Phone Number" required>
+    <input type="text" name="Organization" placeholder="School/Team/Organization" required>
+    <textarea name="Message" placeholder="Why are you applying? (Optional)"></textarea>
+    <input type="submit" value="Apply for Access">
+  </form>
+</section>
 
-  <section id="athlete-spotlight">
-    <h2>Athlete Spotlight</h2>
-    <div class="spotlight-profile">
-      <p><strong>Jordan Daniels</strong></p>
-      <p>Position: Shooting Guard | Height: 6'4" | GPA: 3.8</p>
-      <p>"I love the game and give it my all every time I step on the court."</p>
-    </div>
-    <div class="spotlight-profile">
-      <p><strong>Maya Thompson</strong></p>
-      <p>Position: Forward | Height: 5'11" | GPA: 4.0</p>
-      <p>"I'm a leader on and off the court. Defense wins championships."</p>
-    </div>
-  </section>
+<section id="spotlight">
+  <h2>Athlete Spotlight</h2>
+  <div class="spotlight-card">
+    <strong>Jordan Daniels</strong><br>
+    Position: Wide Receiver | Height: 6'1" | GPA: 3.7<br>
+    "Explosive route runner with reliable hands. Ready for the next level."
+  </div>
+  <div class="spotlight-card">
+    <strong>Maya Thompson</strong><br>
+    Position: Shooting Guard | Height: 5'11" | GPA: 4.0<br>
+    "Elite defender. Lockdown presence on and off the court."
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 ScoutLink
-  </footer>
+<footer>
+  &copy; 2025 ScoutLink. All Rights Reserved.
+</footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+<button id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
 
-  <!-- Tawk.to Live Chat -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68549a14a39e6f190afded94/1iu57jo7b';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
 </body>
 </html>
