@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScoutLink - Find Talent. Get Scouted.</title>
+  <title>ScoutLink - Bold & Energetic (Red & Navy)</title>
   <meta name="description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
-  <meta name="theme-color" content="#000000" />
-
+  <meta name="theme-color" content="#002244" />
   <link rel="icon" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
-
   <style>
-    /* Root colors and fonts */
     :root {
-      --primary-black: #0d0d0d;
-      --primary-red: #d90429;
-      --primary-red-dark: #a5031f;
-      --background-white: #ffffff;
-      --background-light: #f9f9f9;
-      --text-dark: #222222;
-      --text-light: #fefefe;
-      --text-muted: #555555;
-      --shadow-light: rgba(0, 0, 0, 0.1);
+      --primary-black: #002244; /* Navy */
+      --primary-red: #E63946;   /* Bright Red */
+      --primary-red-dark: #B52B36;
+      --background-white: #F1FAEE; /* Off White */
+      --text-dark: #1D3557; /* Dark Blue */
+      --text-light: #F1FAEE;
+      --text-muted: #4A6C8C;
+      --shadow-light: rgba(0, 34, 68, 0.1);
       --transition-speed: 0.3s;
       --border-radius: 12px;
       --font-heading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
     }
 
-    /* Reset and base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -36,7 +31,7 @@
     body {
       margin: 0;
       font-family: var(--font-body);
-      background: var(--background-light);
+      background: var(--background-white);
       color: var(--text-dark);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -44,20 +39,18 @@
       scroll-behavior: smooth;
     }
 
-    /* Scrollbar (modern browsers) */
     ::-webkit-scrollbar {
       width: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--background-light);
+      background: var(--background-white);
     }
     ::-webkit-scrollbar-thumb {
       background-color: var(--primary-red);
       border-radius: 10px;
-      border: 3px solid var(--background-light);
+      border: 3px solid var(--background-white);
     }
 
-    /* Header */
     header {
       background: var(--primary-black);
       color: var(--text-light);
@@ -91,7 +84,7 @@
       padding: 15px 40px;
       border-radius: var(--border-radius);
       text-decoration: none;
-      box-shadow: 0 6px 12px rgba(217, 4, 41, 0.6);
+      box-shadow: 0 6px 12px rgba(230, 57, 70, 0.6);
       transition: background var(--transition-speed), box-shadow var(--transition-speed);
       display: inline-block;
       letter-spacing: 1px;
@@ -99,11 +92,10 @@
     header .cta-btn:hover,
     header .cta-btn:focus {
       background: var(--primary-red-dark);
-      box-shadow: 0 8px 18px rgba(165, 3, 31, 0.8);
+      box-shadow: 0 8px 18px rgba(181, 43, 54, 0.8);
       outline: none;
     }
 
-    /* Navbar */
     nav {
       background: var(--primary-black);
       position: sticky;
@@ -152,7 +144,6 @@
       left: 20%;
     }
 
-    /* Sections */
     section {
       max-width: 1100px;
       margin: 80px auto;
@@ -163,7 +154,7 @@
       transition: box-shadow 0.3s ease-in-out;
     }
     section:hover {
-      box-shadow: 0 12px 30px rgba(217, 4, 41, 0.15);
+      box-shadow: 0 12px 30px rgba(230, 57, 70, 0.15);
     }
     section h2 {
       font-family: var(--font-heading);
@@ -176,7 +167,6 @@
       max-width: fit-content;
     }
 
-    /* Lists */
     ol {
       padding-left: 1.2em;
       margin: 0;
@@ -189,14 +179,13 @@
       line-height: 1.4;
     }
 
-    /* Two columns */
     .two-columns {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
     .column {
-      background: var(--background-light);
+      background: var(--background-white);
       padding: 25px 30px;
       border-radius: var(--border-radius);
       box-shadow: 0 3px 12px var(--shadow-light);
@@ -205,7 +194,7 @@
       transition: box-shadow 0.3s ease;
     }
     .column:hover {
-      box-shadow: 0 10px 25px rgba(217, 4, 41, 0.25);
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.25);
     }
     .column h3 {
       margin-top: 0;
@@ -221,7 +210,6 @@
       line-height: 1.4;
     }
 
-    /* Buttons */
     .cta-btn {
       background: var(--primary-red);
       color: var(--text-light);
@@ -235,7 +223,7 @@
       display: inline-block;
       text-decoration: none;
       user-select: none;
-      box-shadow: 0 6px 12px rgba(217, 4, 41, 0.7);
+      box-shadow: 0 6px 12px rgba(230, 57, 70, 0.7);
       letter-spacing: 1.1px;
       margin-top: 15px;
       text-align: center;
@@ -243,11 +231,10 @@
     .cta-btn:hover,
     .cta-btn:focus {
       background: var(--primary-red-dark);
-      box-shadow: 0 10px 20px rgba(165, 3, 31, 0.9);
+      box-shadow: 0 10px 20px rgba(181, 43, 54, 0.9);
       outline: none;
     }
 
-    /* Form */
     form {
       max-width: 480px;
       margin: auto;
@@ -273,7 +260,7 @@
     form textarea:focus {
       border-color: var(--primary-red);
       outline: none;
-      box-shadow: 0 0 8px rgba(217, 4, 41, 0.5);
+      box-shadow: 0 0 8px rgba(230, 57, 70, 0.5);
     }
     form textarea {
       min-height: 100px;
@@ -294,13 +281,12 @@
     form input[type="submit"]:hover,
     form input[type="submit"]:focus {
       background: var(--primary-red-dark);
-      box-shadow: 0 8px 20px rgba(165, 3, 31, 0.9);
+      box-shadow: 0 8px 20px rgba(181, 43, 54, 0.9);
       outline: none;
     }
 
-    /* Spotlight cards */
     .spotlight-card {
-      background: var(--background-light);
+      background: var(--background-white);
       padding: 25px 30px;
       border-radius: var(--border-radius);
       margin-bottom: 25px;
@@ -312,7 +298,7 @@
       line-height: 1.5;
     }
     .spotlight-card:hover {
-      box-shadow: 0 12px 35px rgba(217, 4, 41, 0.25);
+      box-shadow: 0 12px 35px rgba(230, 57, 70, 0.25);
     }
     .spotlight-card strong {
       display: block;
@@ -326,7 +312,6 @@
       user-select: none;
     }
 
-    /* Footer */
     footer {
       background: var(--primary-black);
       color: var(--text-muted);
@@ -339,7 +324,6 @@
       margin-top: 80px;
     }
 
-    /* Scroll to top button */
     #scroll-top {
       position: fixed;
       bottom: 30px;
@@ -352,7 +336,7 @@
       color: var(--text-light);
       font-size: 28px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(217, 4, 41, 0.8);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.8);
       transition: background var(--transition-speed), box-shadow var(--transition-speed);
       user-select: none;
       z-index: 10000;
@@ -360,11 +344,10 @@
     #scroll-top:hover,
     #scroll-top:focus {
       background: var(--primary-red-dark);
-      box-shadow: 0 10px 30px rgba(165, 3, 31, 0.9);
+      box-shadow: 0 10px 30px rgba(181, 43, 54, 0.9);
       outline: none;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       section {
         margin: 60px 15px 30px;
