@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScoutLink - Clean & Modern (Electric Blue)</title>
+  <title>ScoutLink - Sleek & Minimal (Charcoal & Teal)</title>
   <meta name="description" content="ScoutLink connects hidden athletic talent to real scouts and recruiters." />
-  <meta name="theme-color" content="#0077B6" />
+  <meta name="theme-color" content="#1A1A1A" />
   <link rel="icon" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-blue: #0077B6; /* Electric Blue */
-      --accent-blue: #00B4D8;  /* Sky Blue */
-      --background-white: #F8F9FA; /* Light Grayish White */
-      --text-dark: #212529; /* Very Dark Gray */
+      --primary-charcoal: #1A1A1A; /* Dark Charcoal */
+      --primary-teal: #009688; /* Teal */
+      --primary-teal-dark: #00796B;
+      --background-white: #FAFAFA;
+      --text-dark: #212121;
       --text-light: #FFFFFF;
-      --text-muted: #6C757D;
-      --shadow-light: rgba(0, 119, 182, 0.15);
+      --text-muted: #6D6D6D;
+      --shadow-light: rgba(26, 26, 26, 0.12);
       --transition-speed: 0.3s;
-      --border-radius: 12px;
+      --border-radius: 10px;
       --font-heading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
     }
@@ -42,12 +43,12 @@
       background: var(--background-white);
     }
     ::-webkit-scrollbar-thumb {
-      background-color: var(--primary-blue);
+      background-color: var(--primary-teal);
       border-radius: 10px;
       border: 3px solid var(--background-white);
     }
     header {
-      background: var(--primary-blue);
+      background: var(--primary-charcoal);
       color: var(--text-light);
       padding: 60px 20px 80px;
       text-align: center;
@@ -62,36 +63,36 @@
       margin: 0 0 0.3em 0;
       letter-spacing: 2px;
       text-transform: uppercase;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
     header p {
       font-size: 1.25rem;
       font-weight: 600;
-      color: var(--accent-blue);
+      color: var(--primary-teal);
       margin: 0 0 1.5em 0;
       letter-spacing: 1.2px;
     }
     header .cta-btn {
       font-weight: 700;
       font-size: 1.15rem;
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       color: var(--text-light);
       padding: 15px 40px;
       border-radius: var(--border-radius);
       text-decoration: none;
-      box-shadow: 0 6px 12px rgba(0, 180, 216, 0.7);
+      box-shadow: 0 6px 12px rgba(0, 150, 136, 0.7);
       transition: background var(--transition-speed), box-shadow var(--transition-speed);
       display: inline-block;
       letter-spacing: 1px;
     }
     header .cta-btn:hover,
     header .cta-btn:focus {
-      background: #0096C7;
-      box-shadow: 0 8px 18px rgba(0, 150, 199, 0.9);
+      background: var(--primary-teal-dark);
+      box-shadow: 0 8px 18px rgba(0, 121, 107, 0.9);
       outline: none;
     }
     nav {
-      background: var(--primary-blue);
+      background: var(--primary-charcoal);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -121,14 +122,14 @@
       left: 50%;
       width: 0;
       height: 3px;
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       border-radius: 10px;
       transition: width var(--transition-speed), left var(--transition-speed);
       transform: translateX(-50%);
     }
     nav a:hover,
     nav a:focus {
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       color: var(--text-light);
       outline: none;
     }
@@ -147,15 +148,15 @@
       transition: box-shadow 0.3s ease-in-out;
     }
     section:hover {
-      box-shadow: 0 12px 30px rgba(0, 180, 216, 0.15);
+      box-shadow: 0 12px 30px rgba(0, 150, 136, 0.15);
     }
     section h2 {
       font-family: var(--font-heading);
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: var(--primary-blue);
+      color: var(--primary-charcoal);
       letter-spacing: 1.5px;
-      border-bottom: 4px solid var(--accent-blue);
+      border-bottom: 4px solid var(--primary-teal);
       padding-bottom: 10px;
       max-width: fit-content;
     }
@@ -185,13 +186,13 @@
       transition: box-shadow 0.3s ease;
     }
     .column:hover {
-      box-shadow: 0 10px 25px rgba(0, 180, 216, 0.25);
+      box-shadow: 0 10px 25px rgba(0, 150, 136, 0.25);
     }
     .column h3 {
       margin-top: 0;
       font-family: var(--font-heading);
       font-weight: 700;
-      color: var(--primary-blue);
+      color: var(--primary-charcoal);
       font-size: 1.75rem;
       margin-bottom: 15px;
     }
@@ -201,7 +202,7 @@
       line-height: 1.4;
     }
     .cta-btn {
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       color: var(--text-light);
       border: none;
       padding: 14px 36px;
@@ -213,15 +214,15 @@
       display: inline-block;
       text-decoration: none;
       user-select: none;
-      box-shadow: 0 6px 12px rgba(0, 180, 216, 0.7);
+      box-shadow: 0 6px 12px rgba(0, 150, 136, 0.7);
       letter-spacing: 1.1px;
       margin-top: 15px;
       text-align: center;
     }
     .cta-btn:hover,
     .cta-btn:focus {
-      background: #0096C7;
-      box-shadow: 0 8px 20px rgba(0, 150, 199, 0.9);
+      background: var(--primary-teal-dark);
+      box-shadow: 0 8px 20px rgba(0, 121, 107, 0.9);
       outline: none;
     }
     form {
@@ -247,16 +248,16 @@
     form input[type="text"]:focus,
     form input[type="email"]:focus,
     form textarea:focus {
-      border-color: var(--accent-blue);
+      border-color: var(--primary-teal);
       outline: none;
-      box-shadow: 0 0 8px rgba(0, 180, 216, 0.5);
+      box-shadow: 0 0 8px rgba(0, 150, 136, 0.5);
     }
     form textarea {
       min-height: 100px;
       font-family: var(--font-body);
     }
     form input[type="submit"] {
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       color: var(--text-light);
       font-weight: 700;
       font-size: 1.2rem;
@@ -269,8 +270,8 @@
     }
     form input[type="submit"]:hover,
     form input[type="submit"]:focus {
-      background: #0096C7;
-      box-shadow: 0 8px 20px rgba(0, 150, 199, 0.9);
+      background: var(--primary-teal-dark);
+      box-shadow: 0 8px 20px rgba(0, 121, 107, 0.9);
       outline: none;
     }
     .spotlight-card {
@@ -281,12 +282,12 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
       transition: box-shadow 0.3s ease;
       font-weight: 600;
-      color: var(--primary-blue);
+      color: var(--primary-charcoal);
       font-size: 1.1rem;
       line-height: 1.5;
     }
     .spotlight-card:hover {
-      box-shadow: 0 12px 35px rgba(0, 180, 216, 0.25);
+      box-shadow: 0 12px 35px rgba(0, 150, 136, 0.25);
     }
     .spotlight-card strong {
       display: block;
@@ -295,12 +296,12 @@
       font-size: 1.5rem;
       margin-bottom: 8px;
       letter-spacing: 1.2px;
-      color: var(--primary-blue);
+      color: var(--primary-teal);
       text-transform: uppercase;
       user-select: none;
     }
     footer {
-      background: var(--primary-blue);
+      background: var(--primary-charcoal);
       color: var(--text-muted);
       text-align: center;
       padding: 20px 10px;
@@ -314,7 +315,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: var(--accent-blue);
+      background: var(--primary-teal);
       border: none;
       width: 45px;
       height: 45px;
@@ -322,15 +323,15 @@
       color: var(--text-light);
       font-size: 28px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0, 180, 216, 0.8);
+      box-shadow: 0 5px 15px rgba(0, 150, 136, 0.8);
       transition: background var(--transition-speed), box-shadow var(--transition-speed);
       user-select: none;
       z-index: 10000;
     }
     #scroll-top:hover,
     #scroll-top:focus {
-      background: #0096C7;
-      box-shadow: 0 8px 20px rgba(0, 150, 199, 0.9);
+      background: var(--primary-teal-dark);
+      box-shadow: 0 8px 20px rgba(0, 121, 107, 0.9);
       outline: none;
     }
     @media (max-width: 768px) {
