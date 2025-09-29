@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ScoutLink | Home</title>
-  <meta name="description" content="ScoutLink connects athletes with scouts. Get discovered, showcase your talent, and take your future to the next level." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="ScoutLink connects athletes with scouts. Get discovered, showcase your talent, and take your future to the next level.">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light-mode">
+<body>
 
 <header class="hero">
-  <nav class="navbar">
-    <a href="index.html" class="logo">ScoutLink</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="scout-signup.html">Scout Signup</a></li>
-      <li><a href="#spotlight">Spotlight</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <button id="mode-toggle">🌙</button>
-  </nav>
-
-  <div class="hero-content">
-    <h1 class="hero-title">Find Talent. Get Scouted. Build Your Future.</h1>
-    <p class="hero-tagline">Connecting athletes & scouts nationwide with verified scouting.</p>
-    <a href="scout-signup.html" class="cta-btn">Get Started</a>
-  </div>
+  <p class="slogan">Find Talent. Get Scouted. Build Your Future.</p>
+  <a href="https://instagram.com/scout_link1/" target="_blank" class="cta-btn">Follow on Instagram</a>
 </header>
 
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="scout-signup.html">Scout Signup</a></li>
+    <li><a href="#spotlight">Spotlight</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
 <main>
-  <!-- How It Works -->
-  <section id="how" class="section-light">
+  <section id="how">
     <h2>How It Works</h2>
-    <ol class="how-list">
+    <ol>
       <li>Submit your profile.</li>
       <li>We verify your stats.</li>
       <li>Scouts access your profile.</li>
@@ -41,51 +35,37 @@
     </ol>
   </section>
 
-  <!-- Features -->
-  <section class="features section-dark">
-    <div class="feature-card">
+  <section class="two-columns">
+    <div class="column">
       <h3>Athletes</h3>
       <p>Submit your info. Get discovered. Level up your future.</p>
     </div>
-    <div class="feature-card">
+    <div class="column">
       <h3>Scouts</h3>
       <p>Find hidden gems. Get early access to emerging talent.</p>
     </div>
   </section>
 
-  <!-- Spotlight -->
-  <section id="spotlight" class="section-light">
+  <section id="spotlight">
     <h2>Athlete Spotlight</h2>
-    <div class="spotlight-grid">
-      <article class="spotlight-card">
-        <strong>Devin Smith</strong>
-        <p>QB | DeSoto HS, TX | Class of 2027</p>
-        <p>6'3" / 210 lbs | Strong arm, mobile, smart decision-maker</p>
-        <p>"High football IQ and a great student."</p>
-      </article>
-      <article class="spotlight-card">
-        <strong>Anthony Smith</strong>
-        <p>OL | Cedar Hill HS, TX | Class of 2026</p>
-        <p>6'5" / 300 lbs | Powerful, agile, elite run/pass blocker</p>
-        <p>"Durable, team leader, and strong academically."</p>
-      </article>
-    </div>
+    <article class="spotlight-card">
+      <strong>Devin Smith</strong>
+      <p>QB | DeSoto HS, TX | Class of 2027</p>
+      <p>6'3" / 210 lbs | Strong arm, mobile, smart decision-maker</p>
+      <p>"High football IQ and a great student."</p>
+    </article>
+    <article class="spotlight-card">
+      <strong>Anthony Smith</strong>
+      <p>OL | Cedar Hill HS, TX | Class of 2026</p>
+      <p>6'5" / 300 lbs | Powerful, agile, elite run/pass blocker</p>
+      <p>"Durable, team leader, and strong academically."</p>
+    </article>
   </section>
 </main>
 
 <footer>
   &copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
 </footer>
-
-<script>
-  // Dark/Light Mode Toggle
-  const toggle = document.getElementById('mode-toggle');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-  });
-</script>
 
 </body>
 </html>
