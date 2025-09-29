@@ -1,130 +1,71 @@
-:root {
-  --primary-blue: #005f73;
-  --primary-teal: #0a9396;
-  --primary-teal-dark: #007f7f;
-  --card-bg: #14232a;
-  --text-light: #f0f0f0;
-  --text-muted: #c0c0c0;
-  --border-radius: 12px;
-  --transition-speed: 0.3s;
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScoutLink | Home</title>
+  <meta name="description" content="ScoutLink connects athletes with scouts. Get discovered, showcase your talent, and take your future to the next level." />
+  <link rel="stylesheet" href="styles-v2.css" />
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  background: var(--primary-blue);
-  color: var(--text-light);
-  line-height: 1.6;
-}
+<header>
+  <p class="slogan">Find Talent. Get Scouted. Build Your Future.</p>
+  <a href="https://instagram.com/scout_link1/" target="_blank" class="cta-btn">Follow on Instagram</a>
+</header>
 
-header {
-  text-align: center;
-  padding: 60px 20px 30px 20px;
-}
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="scout-signup.html">Scout Signup</a></li>
+    <li><a href="#spotlight">Spotlight</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
 
-header .slogan {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
+<main>
+  <section id="how">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Submit your profile.</li>
+      <li>We verify your stats.</li>
+      <li>Scouts access your profile.</li>
+      <li>Opportunities open up.</li>
+    </ol>
+  </section>
 
-.cta-btn {
-  background: var(--primary-teal);
-  color: var(--text-light);
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  font-weight: 700;
-  display: inline-block;
-  transition: background var(--transition-speed), box-shadow var(--transition-speed);
-}
+  <section class="two-columns">
+    <div class="column">
+      <h3>Athletes</h3>
+      <p>Submit your info. Get discovered. Level up your future.</p>
+    </div>
+    <div class="column">
+      <h3>Scouts</h3>
+      <p>Find hidden gems. Get early access to emerging talent.</p>
+    </div>
+  </section>
 
-.cta-btn:hover {
-  background: var(--primary-teal-dark);
-  box-shadow: 0 6px 15px rgba(0,127,127,0.6);
-}
+  <section id="spotlight">
+    <h2>Athlete Spotlight</h2>
+    <article class="spotlight-card">
+      <strong>Devin Smith</strong>
+      <p>QB | DeSoto HS, TX | Class of 2027</p>
+      <p>6'3" / 210 lbs | Strong arm, mobile, smart decision-maker</p>
+      <p>"High football IQ and a great student."</p>
+    </article>
+    <article class="spotlight-card">
+      <strong>Anthony Smith</strong>
+      <p>OL | Cedar Hill HS, TX | Class of 2026</p>
+      <p>6'5" / 300 lbs | Powerful, agile, elite run/pass blocker</p>
+      <p>"Durable, team leader, and strong academically."</p>
+    </article>
+  </section>
+</main>
 
-nav.main-nav {
-  background: #023047;
-  padding: 10px 0;
-}
+<footer>
+  &copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
 
-nav.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-nav.main-nav a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 16px;
-  border-radius: var(--border-radius);
-  transition: background var(--transition-speed);
-}
-
-nav.main-nav a:hover,
-nav.main-nav a.active {
-  background: var(--primary-teal);
-}
-
-main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.card-section {
-  background: var(--card-bg);
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-.two-columns {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.two-columns .column {
-  flex: 1;
-  min-width: 250px;
-}
-
-.spotlight-card {
-  background: #1f2d36;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-footer {
-  background: #023047;
-  color: var(--text-muted);
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .two-columns {
-    flex-direction: column;
-  }
-
-  header .slogan {
-    font-size: 1.5rem;
-  }
-
-  nav.main-nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
+</body>
+</html>
