@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ScoutLink | Home</title>
-<meta name="description" content="ScoutLink connects athletes with scouts. Get discovered, showcase your talent, and take your future to the next level." />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutLink | Home</title>
+  <meta name="description" content="ScoutLink connects athletes with scouts. Get discovered, showcase your talent, and take your future to the next level." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header class="hero">
   <h1>ScoutLink</h1>
   <p class="slogan">Find Talent. Get Scouted. Build Your Future.</p>
-  <a href="scout-signup.html" class="cta-btn">Submit Profile</a>
-  <a href="scout-signup.html" class="cta-btn">Scout Access</a>
+  <div class="hero-buttons">
+    <a href="scout-signup.html" class="cta-btn">Submit Profile</a>
+    <a href="scout-signup.html" class="cta-btn">Scout Access</a>
+  </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
+<nav aria-label="Main navigation">
+  <a href="index.html" class="active">Home</a>
   <a href="pricing.html">Pricing</a>
   <a href="scout-signup.html">Scout Signup</a>
   <a href="#spotlight">Spotlight</a>
@@ -25,46 +27,49 @@
 </nav>
 
 <main>
-<section id="how">
-  <h2>How It Works</h2>
-  <ol>
-    <li>Submit your profile.</li>
-    <li>We verify your stats.</li>
-    <li>Scouts access your profile.</li>
-    <li>Opportunities open up.</li>
-  </ol>
-</section>
+  <section id="how">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Submit your profile.</li>
+      <li>We verify your stats.</li>
+      <li>Scouts access your profile.</li>
+      <li>Opportunities open up.</li>
+    </ol>
+  </section>
 
-<section class="two-columns">
-  <div class="column">
-    <h3>Athletes</h3>
-    <p>Submit your info. Get discovered. Level up your future.</p>
-  </div>
-  <div class="column">
-    <h3>Scouts</h3>
-    <p>Find hidden gems. Get early access to emerging talent.</p>
-  </div>
-</section>
+  <section class="two-columns">
+    <div class="column">
+      <h3>Athletes</h3>
+      <p>Submit your info. Get discovered. Level up your future.</p>
+    </div>
+    <div class="column">
+      <h3>Scouts</h3>
+      <p>Find hidden gems. Get early access to emerging talent.</p>
+    </div>
+  </section>
 
-<section id="spotlight">
-  <h2>Athlete Spotlight</h2>
-  <article class="spotlight-card">
-    <strong>Devin Smith</strong>
-    <p>QB | DeSoto HS, TX | Class of 2027</p>
-    <p>6'3\" / 210 lbs | Strong arm, mobile, smart decision-maker</p>
-    <p>"High football IQ and a great student."</p>
-  </article>
-  <article class="spotlight-card">
-    <strong>Anthony Smith</strong>
-    <p>OL | Cedar Hill HS, TX | Class of 2026</p>
-    <p>6'5\" / 300 lbs | Powerful, agile, elite run/pass blocker</p>
-    <p>"Durable, team leader, and strong academically."</p>
-  </article>
-</section>
+  <section id="spotlight">
+    <h2>Athlete Spotlight</h2>
+    
+    <article class="spotlight-card">
+      <h3>Devin Smith</h3>
+      <p>QB | DeSoto HS, TX | Class of 2027</p>
+      <p>6'3" / 210 lbs | Strong arm, mobile, smart decision-maker</p>
+      <p>"High football IQ and a great student."</p>
+    </article>
+
+    <article class="spotlight-card">
+      <h3>Anthony Smith</h3>
+      <p>OL | Cedar Hill HS, TX | Class of 2026</p>
+      <p>6'5" / 300 lbs | Powerful, agile, elite run/pass blocker</p>
+      <p>"Durable, team leader, and strong academically."</p>
+    </article>
+
+  </section>
 </main>
 
 <footer>
-&copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+  &copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
 </footer>
 
 </body>
