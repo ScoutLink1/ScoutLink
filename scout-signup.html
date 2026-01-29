@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ScoutLink | Scout Signup</title>
-<meta name="description" content="Apply for ScoutLink database access as a scout. Fill out the form to get verified and access athlete profiles." />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutLink | Scout Signup</title>
+  <meta name="description" content="Apply for ScoutLink database access as a scout. Fill out the form to get verified and access athlete profiles." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -14,41 +14,42 @@
   <p>Apply for database access</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
   <a href="index.html">Home</a>
   <a href="pricing.html">Pricing</a>
-  <a href="scout-signup.html">Scout Signup</a>
+  <a href="scout-signup.html" class="active">Scout Signup</a>
   <a href="about.html">About</a>
 </nav>
 
 <main>
-<section>
-<form action="https://formsubmit.co/scoutlink2025@gmail.com" method="POST">
-  <input type="hidden" name="_redirect" value="thank-you.html">
-  <input type="hidden" name="_captcha" value="false">
+  <section>
+    <h2>Apply as a Scout</h2>
+    <form action="https://formsubmit.co/scoutlink2025@gmail.com" method="POST">
+      <input type="hidden" name="_redirect" value="thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
 
-  <label for="name">Full Name</label>
-  <input type="text" id="name" name="Name" placeholder="Full Name" required>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="Email" placeholder="Email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
 
-  <label for="phone">Phone Number</label>
-  <input type="tel" id="phone" name="Phone" placeholder="Phone Number" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
 
-  <label for="organization">School/Team/Organization</label>
-  <input type="text" id="organization" name="Organization" placeholder="School/Team/Organization" required>
+      <label for="organization">School / Team / Organization</label>
+      <input type="text" id="organization" name="organization" placeholder="School / Team / Organization" required>
 
-  <label for="message">Why are you applying? (Optional)</label>
-  <textarea id="message" name="Message" placeholder="Optional message"></textarea>
+      <label for="message">Why are you applying? (Optional)</label>
+      <textarea id="message" name="message" placeholder="Optional message"></textarea>
 
-  <button type="submit" class="cta-btn">Apply for Access</button>
-</form>
-</section>
+      <button type="submit" class="cta-btn">Apply for Access</button>
+    </form>
+  </section>
 </main>
 
 <footer>
-&copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+  &copy; 2025 ScoutLink | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
 </footer>
 
 </body>
